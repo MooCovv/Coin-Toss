@@ -16,5 +16,30 @@ namespace Coin_Toss
         {
             InitializeComponent();
         }
+
+        private void tossButton_Click(object sender, EventArgs e)
+        {
+            int sideUp;
+
+            Random rand = new Random();
+
+            sideUp = rand.Next(2);
+
+            if (sideUp == 0)
+            {
+                tailsPictureBox.Visible = true;
+                headsPictureBox.Visible = false;
+            }
+            else
+            {
+                headsPictureBox.Visible = true;
+                tailsPictureBox.Visible = false;
+            }
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
